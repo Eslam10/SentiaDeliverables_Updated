@@ -1,5 +1,6 @@
 function Create_Policy_Assignment
 {
+	echo "############################################Create Virtual Network/Subnets############################################"
 	echo "############################################Create Policy Assignment with REST API############################################" >> C:\AzureLog_$DATE.txt;
 	##Authentication and getting token for REST API
 	$azContext     = Get-AzureRmContext

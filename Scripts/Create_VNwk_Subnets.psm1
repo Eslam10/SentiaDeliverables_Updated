@@ -1,5 +1,6 @@
 function Create_VNwk_Subnets
 {
+	echo "############################################Create Virtual Network/Subnets############################################"
 	echo "############################################Create Virtual Network/Subnets############################################" >> C:\AzureLog_$DATE.txt
 	$VNWKExist = Get-AzureRmResource -ResourceName $FileLocations['VNKName'] -ResourceGroupName $RG_Name;
 	if(!$VNWKExist)

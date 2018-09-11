@@ -1,5 +1,6 @@
 function Create_Policy_Definition
 {
+	echo "############################################Create Policy Definition With REST API############################################"
 	echo "############################################Create Policy Definition With REST API############################################" >> C:\AzureLog_$DATE.txt
 	##Authentication and getting token for REST API
 	$azContext     = Get-AzureRmContext

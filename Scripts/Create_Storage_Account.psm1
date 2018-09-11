@@ -1,5 +1,6 @@
 function Create_Storage_Account
 {
+	echo "############################################Create Storage Account############################################"
 	echo "############################################Create Storage Account############################################" >> C:\AzureLog_$DATE.txt;
 	New-AzureRmResourceGroupDeployment -ResourceGroupName $RG_Name `
 	-TemplateUri $FileLocations['SAtemplate'] `

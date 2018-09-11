@@ -1,5 +1,6 @@
 function Create_Resource_Group
 {
+	echo "############################################Create Resource Group############################################"
 	echo "############################################Create Resource Group############################################" >> C:\AzureLog_$DATE.txt;
 	$webRGParameters  = Invoke-WebRequest $FileLocations['RGParametersFileLocation']
 	$webRGTag         = Invoke-WebRequest $FileLocations['RGTagFileLocation']
