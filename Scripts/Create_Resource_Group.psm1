@@ -8,10 +8,10 @@ function Create_Resource_Group
 	$ResourceGroupExist = Get-AzureRmResourceGroup -Name $RGParameters['Name'] -ErrorAction SilentlyContinue
 	if(!$ResourceGroupExist)
 	{
-		New-AzureRmResourceGroup @RGParameters -Tag $RGTag -Force;
+		New-AzureRmResourceGroup @RGParameters -Tag $RGTag -Force >> C:\AzureLog_$DATE.txt;
 		if($? -eq "True")
 		{
-			echo "Resource Group [$RG_Name] successfully created" >> C:\AzureLog_$DATE.txt;
+			echo "Resource Group $RGParameters['Name'] successfully created" >> C:\AzureLog_$DATE.txt;
 		}
 		else
 		{
@@ -23,5 +23,5 @@ function Create_Resource_Group
 	{
 		echo "Resource Group [$RG_Name] already exists" >> C:\AzureLog_$DATE.txt; 
 	}
-		return $RGParameters['Name'];
+		return $RG_Name;
 }

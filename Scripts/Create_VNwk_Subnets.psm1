@@ -5,7 +5,7 @@ function Create_VNwk_Subnets
 	if(!$VNWKExist)
 	{
 		New-AzureRmResourceGroupDeployment -ResourceGroupName $RG_Name `
-		-TemplateUri $FileLocations['VNwktemplate'] -TemplateParameterUri $FileLocations['VNwkparameter']; >> C:\AzureLog_$DATE.txt
+		-TemplateUri $FileLocations['VNwktemplate'] -TemplateParameterUri $FileLocations['VNwkparameter'] >> C:\AzureLog_$DATE.txt;
 		if($? -eq "True")
 		{
 			echo "Virtual Network "$FileLocations['VNKName']" successfully created" >> C:\AzureLog_$DATE.txt;

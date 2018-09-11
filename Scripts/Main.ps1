@@ -24,7 +24,6 @@ Import-Module "C:\Sentia\Scripts\Create_Policy_Assignment.psm1" -Force;
 $tmp = Get_Temp_Param_Files; #Return filelocations data to be used in all other modules.
 $FileLocations = $tmp['1']; 
 $RG_Name = Create_Resource_Group -FileLocations $FileLocations;  #Create RG, Return RG_Name
-
 Create_Storage_Account -FileLocations $FileLocations -RG_Name $RG_Name;
 
 Create_VNwk_Subnets -FileLocations $FileLocations -RG_Name $RG_Name;
